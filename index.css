@@ -1,0 +1,485 @@
+/* VARIABLES CSS*/
+:root {
+
+   /* Colores empresa */
+    --amarillo: #e6ae48;
+    --negro: #393939;
+    --blanco: #ffffff;
+    --pink: #ef2853;
+    --gris: rgb(165, 165, 165);
+  
+    /* Tipografía empresa */
+    --tipo-principal: "Raleway", sans-serif;
+  }
+
+  /* RESET CSS */
+
+
+*{  
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline-flex;
+}
+li{
+    list-style-type: none;
+}
+h1, h2 , h3 , h4 , h5 , h6 , strong{
+    font-size: inherit;
+    font-weight: inherit;
+}
+img{
+    width:100%;
+    display: block;
+    object-fit: cover;
+}
+::selection{
+    background-color: var(--amarillo);
+    color: var(--blanco);
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--negro);
+    background-color: var(--blanco);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+} 
+
+
+/* HEADER */
+
+.header{
+   width:100%;
+   background-color: var(--blanco); 
+   padding: 2.5em 0;
+
+   text-transform: uppercase;
+   font-weight: 800;
+   letter-spacing: 3px;
+
+   position: fixed;
+   top:0;
+   left:0;
+}
+.header .centrado{  /*no borro este .header porque en el footer tengo otro class centrado*/
+    width:90%;
+    
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.stklm{
+    font-size: 220%;
+    
+}
+.header .centrado .fa-bars{
+    display: none;
+}
+.centrado .nav{
+    width: calc( 100% - 200px );
+
+    font-size: 0.8em;
+}
+.nav .ul{
+   
+    width:100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: initial;
+}
+.ul .li{
+    
+    margin: 0 0 0 4em;
+}
+.li .a{
+    transition: all .5s ease;
+}
+
+.a:hover{
+    color:var(--amarillo);
+}
+
+.amarillete{
+    color:var(--amarillo);
+}
+
+
+/* submenus */
+nav ul ul {
+    display:none;
+    position:absolute;
+
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-content: left;
+    margin-left: -1em;
+    padding: 2em;
+    margin-top: -0.1em;
+    background-color:var(--casi-negro);
+    color: var(--blanco);  
+    border: 10px transparent; 
+ }
+
+ul ul li{      /*items submenu*/
+    display: flex;
+    line-height:3em ;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight:500 ;
+    letter-spacing: 1px;
+    
+    
+    color:var(--gris);
+    
+ }
+ ul ul li:hover{
+    color: var(--gris);
+    transition: all .2s ease;
+ }
+ ul li:hover > ul{  /*recuadro submenu*/
+    display: flex;
+    position: fixed;    
+    
+    flex-flow: column nowrap;
+    background-color: var(--blanco);
+    border-top:solid var(--amarillo) 5px ;
+}
+
+ul ul li:hover {
+    color: var(--amarillo);
+} 
+
+ul ul li:first-child {
+    padding-top: 1.25em;
+    
+}
+
+ul li ul > li:hover > .lineam{  /*linea submenu*/
+    display: flex;
+    position: relative;
+   
+}
+
+
+
+
+.main{
+    width: 100%;
+
+}
+.producto{
+    width:100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+.producto .centrado{
+    width:90%;
+    max-width: 1100px;
+    
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: initial;
+}
+.columna{
+    width: calc( 90% / 2 );
+
+}
+/*.main .producto .centrado .columna .img{}*/
+.h2{
+    font-size: 2.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color:var(--negro);
+}
+.linea{
+    width:100%;
+    max-width: 120px;
+    min-height: 2px;
+    background-color: var(--negro);
+    margin:2em 0;
+    display: inline-flex;
+}
+.p{
+    margin: 0 0 2.2em;
+    line-height: 1.8em;
+    color:var(--negro);
+}
+.centrado .columna .a{
+    
+    padding: 1em 2em;
+    border:2px solid var(--amarillo);
+
+    display: inline-flex;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7em;
+    letter-spacing: 2px;
+    color:var(--amarillo);
+
+    transition: all .5s ease;
+}
+.centrado .columna .a:hover{
+    color:var(--blanco);
+    background:var(--amarillo);
+}
+
+
+.main .amarillo{
+    background:var(--amarillo);
+}
+.amarillo .centrado{
+    flex-flow: row-reverse wrap;
+    text-align: right;
+}
+.amarillo .centrado .columna .h2{
+    color:var(--blanco);
+}
+.amarillo .centrado .columna .linea{
+    background-color: var(--blanco);
+}
+.amarillo .centrado .columna .p{
+    color:var(--blanco);
+}
+.amarillo .centrado .columna .a{
+    color:var(--blanco);
+    border-color: var(--blanco);
+}
+.amarillo .centrado .columna .a:hover{
+    background-color: var(--blanco);
+    color:var(--amarillo);
+}
+
+
+.footer{
+    width:100%;
+    min-height: 100vh;
+    background-color: var(--negro);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+
+    text-align: center;
+}
+.footer .centrado{
+    width:90%;
+    max-width: 1100px;
+    /* background-color: orange; */
+}
+.h3{
+    text-transform: uppercase;
+    font-size: 4.4em;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color:var(--blanco);
+}
+.copy{
+    color:var(--amarillo);
+    font-size: .8em;
+    font-weight: 400;
+}
+/*.footer .centrado .a{}*/
+
+.linea{
+    width:100%;
+    max-width: 115px;
+    height: 2px;
+    background-color: var(--blanco);
+    margin: 2.5em auto 4em;
+    
+}
+.footer .centrado .ul{
+    /* background-color: red; */
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+.footer .centrado .ul .li{
+    margin: 0 .4em;
+}
+.footer .centrado .ul .li .a{
+    width:25px;
+    height: 25px;
+    background-color:var(--blanco);
+
+    border-radius: 100%;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+
+    color: var(--negro);
+
+    transition: all .5s ease;
+}
+.footer .centrado .ul .li .a:hover{
+    background:var(--amarillo);
+}
+.footer .centrado .ul .li .a .fa-twitter{
+    position: relative;
+    top:1px;
+    left:1px;
+} 
+
+
+
+.square{
+
+    height: 100px;
+    width: 100px;
+    background-color:var(--negro);
+    display: flex;
+    position: fixed;
+    top: calc(50% - 25px); 
+    right: 30px; 
+    cursor: pointer;    
+    border-radius: 50%;
+    
+}
+
+/* .imgfix{
+    width: 26px;
+    height: 26px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    position: relative;
+    margin: 8px;
+} */
+
+.textfix{
+    color: var(--blanco);
+    position: relative;
+    margin: auto;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: .11em;
+}
+
+
+.doble {
+     
+    /* transform-origin: right;  */
+    transition: all 0.2s ease; 
+    transform: scale(1.5);
+}
+
+@media screen and (max-width:915px){
+
+.header .centrado .nav{
+    display: none;
+}
+.header .centrado .fa-bars{
+    display: flex;
+
+}
+.header .centrado .a{
+    display:grid;
+    position:fixed;
+    left:45vw;
+    font-size: 200%;
+    
+   
+}
+.main .producto{
+    padding: 15vh 0;
+}
+.main .producto .centrado{
+    justify-content: center;
+}
+
+.main .producto .centrado .columna{
+    width: 80%;
+}
+.main .producto .centrado .columna .img{
+    margin: 0 0 2em;
+}
+
+}
+
+@media screen and (prefers-color-scheme:dark){
+    :root{
+        --amarillo : #e6ae48;
+        --negro    : white;
+        --blanco   : black;
+    }
+}
+
+/*  
+.header{}
+.header .centrado{}
+.header .h1{}
+.header .h1 .a{}
+.header .nav{}
+.header .ul{}
+.header .li{}
+.header .li .a{}
+
+.main{}
+
+.producto{}
+.producto .centrado{}
+.producto .columna{}
+.producto .img{}
+.producto .h2{}
+.producto .linea{}
+.producto .p{}
+.producto .a{} 
+
+.amarillo{}
+.amarillo .centrado{}
+.amarillo .columna .h2{}
+.amarillo .linea{}
+.amarillo .p{}
+.amarillo .a{}
+.amarillo .a:hover{}
+
+.footer{}
+.footer .centrado{}
+.footer .h3{}
+.footer .a{}
+.footer .linea{}
+.footer .ul{}
+.footer .li{}
+.footer .a{}
+.footer .a .fab{}
+ */
