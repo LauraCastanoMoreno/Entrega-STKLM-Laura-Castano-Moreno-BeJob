@@ -8,6 +8,6 @@ ctas.forEach(function (elemento) {
     });
     /* puedo quitar las llaves porque es sólo una linea,y también el ;*/
     elemento.addEventListener('mouseout', function () {
-        return elemento.classList.remove('doble');
+        elemento.classList.remove('doble');
     });
 });

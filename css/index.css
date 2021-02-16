@@ -376,14 +376,6 @@ ul li ul > li:hover > .lineam{  /*linea submenu*/
     
 }
 
-/* .imgfix{
-    width: 26px;
-    height: 26px;
-    background-color: var(--blanco);
-    border-radius: 50%;
-    position: relative;
-    margin: 8px;
-} */
 
 .textfix{
     color: var(--blanco);
@@ -444,42 +436,3 @@ ul li ul > li:hover > .lineam{  /*linea submenu*/
     }
 }
 
-/*  
-.header{}
-.header .centrado{}
-.header .h1{}
-.header .h1 .a{}
-.header .nav{}
-.header .ul{}
-.header .li{}
-.header .li .a{}
-
-.main{}
-
-.producto{}
-.producto .centrado{}
-.producto .columna{}
-.producto .img{}
-.producto .h2{}
-.producto .linea{}
-.producto .p{}
-.producto .a{} 
-
-.amarillo{}
-.amarillo .centrado{}
-.amarillo .columna .h2{}
-.amarillo .linea{}
-.amarillo .p{}
-.amarillo .a{}
-.amarillo .a:hover{}
-
-.footer{}
-.footer .centrado{}
-.footer .h3{}
-.footer .a{}
-.footer .linea{}
-.footer .ul{}
-.footer .li{}
-.footer .a{}
-.footer .a .fab{}
- */
